@@ -1,0 +1,47 @@
+.section__subtitle {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.forwho__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.forwho__card {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #fff;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.forwho__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.forwho__title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+.forwho__desc {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .forwho__grid {
+    grid-template-columns: 1fr;
+  }
+  .forwho__card {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .forwho__icon {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,100 @@
+/* Header flutuante / card style */
+.header-floating {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 16px; /* leve espaçamento do topo */
+  width: calc(100% - 2rem);
+  max-width: 1100px; /* alinhar com .container */
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* inner card */
+.header-floating__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 255, 255, 0.905);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* brand (logo only) */
+.header-floating__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+.header-floating__logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+}
+
+/* nav links */
+.header-floating__nav {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* button-like links */
+.header-floating__link {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.72rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted, rgba(0, 0, 0, 0.65));
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+.header-floating__link:hover,
+.header-floating__link:focus {
+  background: rgba(0, 74, 173, 0.06);
+  color: var(--primary, #004aad);
+  transform: translateY(-1px);
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.06);
+}
+/* botão especial "Contatos" */
+.header-floating__link--cta {
+  background: var(--primary, #004aad);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s, transform 0.12s;
+}
+
+.header-floating__link--cta:hover,
+.header-floating__link--cta:focus {
+  background: #003180; /* tom mais escuro do azul primário */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.2);
+  outline: none;
+}
+
+/* mobile: hide nav and allow a compact card (you can later add a menu button) */
+@media (max-width: 820px) {
+  .header-floating__nav {
+    display: none;
+  }
+  .header-floating__inner {
+    padding: 0.6rem;
+  }
+  .header-floating {
+    top: 10px;
+    width: calc(100% - 1.2rem);
+  }
+}
+
+/* ensure content below isn't hidden behind fixed header:
+   add enough top padding to main container in global.css or App.jsx:
+   body main { padding-top: calc(44px + 32px); } // example if needed
+*/
