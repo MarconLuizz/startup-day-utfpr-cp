@@ -1,64 +1,89 @@
 .cta {
+  background-color: #f7f7f7; /* leve cinza */
+  padding: 4rem 1.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 3rem 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 74, 173, 0.04),
-    rgba(255, 255, 255, 0)
-  );
-  border-radius: 14px;
 }
-.cta__left {
-  flex: 1;
-  max-width: 720px;
+
+.cta__card {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 74, 173, 0.15); /* borda temática azul translúcida */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  max-width: 1050px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.cta__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 74, 173, 0.15);
+}
+
 .cta__logo {
-  width: 56px;
-  height: 56px;
-}
-.cta__title {
-  color: var(--primary);
-  margin-top: 0.6rem;
-  font-size: 1.6rem;
-}
-.cta__subtitle {
-  color: var(--muted);
-  margin: 0.6rem 0 1rem;
-}
-.cta__badges {
-  display: flex;
-  gap: 0.6rem;
+  width: 80px;
+  height: auto;
   margin-bottom: 1rem;
 }
+
+.cta__title {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta__subtitle {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.cta__badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
 .cta__badge {
-  padding: 0.5rem 0.7rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 600;
   color: var(--primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-.cta__links {
+
+.cta__socials {
   display: flex;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.cta__right img {
-  width: 280px;
-  max-width: 100%;
-  display: block;
+.cta__icon {
+  font-size: 1.8rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 900px) {
-  .cta {
-    flex-direction: column;
-    text-align: center;
+.cta__icon:hover {
+  color: #0056d2;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .cta__card {
+    padding: 2rem 1rem;
   }
-  .cta__right {
-    margin-top: 1rem;
+
+  .cta__badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
   }
 }
