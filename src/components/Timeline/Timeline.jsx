@@ -20,7 +20,7 @@ export default function Timeline() {
   }, []);
 
   return (
-    <section className="timeline-section">
+    <section id="timeline" className="timeline-section">
       <div className="timeline-container">
         <h3 className="timeline-title">Uma tarde imersiva para alçar voos</h3>
         <p className="timeline-subtitle">Programação completa do evento</p>

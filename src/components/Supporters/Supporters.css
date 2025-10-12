@@ -1,21 +1,44 @@
+/* Seção Apoiadores */
+.supporters-section {
+  background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+  padding: 4rem 1rem;
+}
+
 .supporters__wrap {
-  margin-top: 2rem;
   display: flex;
+  gap: 2rem;
   justify-content: center;
-  gap: 4rem; /* espaço entre as logos */
-  flex-wrap: nowrap; /* impede quebra de linha */
+  flex-wrap: nowrap;
+  overflow-x: auto; /* scroll horizontal */
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.supporters__wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.supporters__wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 74, 173, 0.5);
+  border-radius: 3px;
 }
 
 .supporters__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px; /* tamanho maior */
-  height: 120px; /* tamanho maior */
+  width: 180px;
+  height: 120px;
   padding: 0.5rem;
   background: none;
   border: none;
   box-shadow: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.supporters__item:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 .supporters__logo {
@@ -30,16 +53,14 @@
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 2rem;
+  color: var(--primary, #004aad);
 }
 
 /* Responsivo */
 @media (max-width: 1200px) {
   .supporters__wrap {
-    gap: 2rem;
+    gap: 1rem;
   }
-}
-
-@media (max-width: 900px) {
   .supporters__item {
     width: 140px;
     height: 100px;
@@ -47,6 +68,9 @@
 }
 
 @media (max-width: 700px) {
+  .supporters__wrap {
+    gap: 0rem;
+  }
   .supporters__item {
     width: 120px;
     height: 80px;

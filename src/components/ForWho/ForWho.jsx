@@ -1,7 +1,31 @@
 import React from "react";
 import "./ForWho.css";
+import { FaUsers } from "react-icons/fa"; // substituindo FaPeopleGroup
+import { PiStudentFill } from "react-icons/pi";
+import { IoIosRocket } from "react-icons/io";
 
 export default function ForWho() {
+  const cards = [
+    {
+      id: "fw-students",
+      title: "Comunidade",
+      desc: "Aprenda e descubra o ecossistema de empreendedorismo de Cornélio e região.",
+      icon: <FaUsers size={36} color="#004aad" />,
+    },
+    {
+      id: "fw-mentors",
+      title: "Estudantes & Entusiastas",
+      desc: "Troque conhecimento, inspire e conecte-se com outros inovadores.",
+      icon: <PiStudentFill size={36} color="#004aad" />,
+    },
+    {
+      id: "fw-startups",
+      title: "Empreendedores & Startups",
+      desc: "Conecte-se, compartilhe experiências e encontre novas oportunidades.",
+      icon: <IoIosRocket size={36} color="#004aad" />,
+    },
+  ];
+
   return (
     <section className="forwho" id="forwho">
       <div className="forwho__inner container">
@@ -16,125 +40,23 @@ export default function ForWho() {
           role="list"
           aria-label="Público do evento"
         >
-          <article
-            className="forwho__card"
-            role="listitem"
-            aria-labelledby="fw-students"
-          >
-            <div className="forwho__icon" aria-hidden="true">
-              {/* graduation cap */}
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L1 7l11 5 9-4.09V17"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M21 18v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+          {cards.map((card) => (
+            <article
+              key={card.id}
+              className="forwho__card"
+              role="listitem"
+              aria-labelledby={card.id}
+            >
+              <div className="forwho__icon" aria-hidden="true">
+                {card.icon}
+              </div>
 
-            <h3 id="fw-students" className="forwho__card-title">
-              Estudantes
-            </h3>
-            <p className="forwho__card-desc">
-              Que desejam aprender sobre startups, inovação e empreendedorismo
-              de forma prática.
-            </p>
-          </article>
-
-          <article
-            className="forwho__card"
-            role="listitem"
-            aria-labelledby="fw-mentors"
-          >
-            <div className="forwho__icon" aria-hidden="true">
-              {/* mentor / teacher */}
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 12a4 4 0 100-8 4 4 0 000 8z"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4 20s1.5-4 8-4 8 4 8 4"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3 id="fw-mentors" className="forwho__card-title">
-              Professores & Mentores
-            </h3>
-            <p className="forwho__card-desc">
-              Que buscam trocar conhecimento, inspirar e orientar novos
-              talentos.
-            </p>
-          </article>
-
-          <article
-            className="forwho__card"
-            role="listitem"
-            aria-labelledby="fw-startups"
-          >
-            <div className="forwho__icon" aria-hidden="true">
-              {/* rocket / startup */}
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 5s1 2 0 4-3 2-4 3-1 3-1 3l-3 3s1-2 1-4 2-3 3-4 2-4 4-5z"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M9 14l-2 2"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3 id="fw-startups" className="forwho__card-title">
-              Empreendedores & Startups
-            </h3>
-            <p className="forwho__card-desc">
-              Que querem se conectar, compartilhar experiências e encontrar
-              novas oportunidades.
-            </p>
-          </article>
+              <h3 id={card.id} className="forwho__card-title">
+                {card.title}
+              </h3>
+              <p className="forwho__card-desc">{card.desc}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

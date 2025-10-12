@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="hero__actions">
           <button
             className="btn btn--primary"
-            onClick={() => scrollToId("cronograma")}
+            onClick={() => scrollToId("timeline")}
           >
             Veja o Cronograma
           </button>

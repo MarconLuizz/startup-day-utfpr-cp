@@ -1,5 +1,7 @@
 import React from "react";
 import "./About.css";
+import { FaRocket, FaEye } from "react-icons/fa";
+import { GoGoal } from "react-icons/go";
 
 export default function About() {
   return (
@@ -14,7 +16,7 @@ export default function About() {
             no ecossistema local. Um evento criado para unir estudantes,
             startups, professores e o mercado em um único lugar, fomentando
             troca de conhecimento e criação de oportunidades. Nossa missão é
-            acelerar a inovação em Cornélio Procópio e capacitar uma nova
+            acelerar a inovação em Cornélio Procópio e incentivar uma nova
             geração de empreendedores.
           </p>
         </div>
@@ -26,23 +28,7 @@ export default function About() {
             aria-labelledby="mission-title"
           >
             <div className="about__icon" aria-hidden="true">
-              {/* simple rocket icon */}
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 2s3 1 5 3 3 5 3 5-2 1-4 3-4 5-4 5-3-2-5-4S2 12 2 12s2-3 5-5 5-5 5-5z"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <FaRocket size={36} color="#004aad" />
             </div>
             <h3 id="mission-title" className="about__card-title">
               Missão
@@ -58,31 +44,7 @@ export default function About() {
             aria-labelledby="objective-title"
           >
             <div className="about__icon" aria-hidden="true">
-              {/* target icon */}
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                ></circle>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="5"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                ></circle>
-                <circle cx="12" cy="12" r="2" fill="#004aad" />
-              </svg>
+              <GoGoal size={36} color="#004aad" />
             </div>
             <h3 id="objective-title" className="about__card-title">
               Objetivo
@@ -96,48 +58,7 @@ export default function About() {
             aria-labelledby="vision-title"
           >
             <div className="about__icon" aria-hidden="true">
-              {/* network icon */}
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 12h4"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M17 12h4"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="12"
-                  cy="6"
-                  r="2"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                />
-                <circle
-                  cx="12"
-                  cy="18"
-                  r="2"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                />
-                <path
-                  d="M12 8v6"
-                  stroke="#004aad"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <FaEye size={36} color="#004aad" />
             </div>
             <h3 id="vision-title" className="about__card-title">
               Visão

@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import scrollToId from "./Header.utils";
-import logo from "../../assets/logo.png"; // ajuste conforme necessário
+import logo from "../../assets/logo.png";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const menu = [
-    { label: "Início", href: "#home" },
-    { label: "Sobre", href: "#about" },
-    { label: "Local", href: "#info" },
-    { label: "Cronograma", href: "#cronograma" },
+    { label: "Início", href: "home" },
+    { label: "Sobre", href: "about" },
+    { label: "Local", href: "info" },
+    { label: "Cronograma", href: "timeline" },
   ];
+
+  const handleScroll = (href) => {
+    scrollToId(href);
+    setMenuOpen(false); // fecha menu mobile ao clicar
+  };
 
   return (
     <header className="header-floating" role="banner">
@@ -30,25 +37,40 @@ export default function Header() {
           />
         </a>
 
-        <nav className="header-floating__nav" aria-label="Navegação principal">
+        {/* Nav desktop / mobile */}
+        <nav
+          className={`header-floating__nav ${
+            menuOpen ? "header-floating__nav--open" : ""
+          }`}
+          aria-label="Navegação principal"
+        >
           {menu.map((item) => (
             <button
               key={item.href}
               className="header-floating__link"
-              onClick={() => scrollToId(item.href)}
+              onClick={() => handleScroll(item.href)}
             >
               {item.label}
             </button>
           ))}
-
-          {/* Novo botão Contatos */}
           <button
             className="header-floating__link header-floating__link--cta"
-            onClick={() => scrollToId("cta")}
+            onClick={() => handleScroll("cta")}
           >
             Contatos
           </button>
         </nav>
+
+        {/* Hamburger mobile */}
+        <button
+          className="header-floating__hamburger"
+          aria-label="Abrir menu"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </header>
   );

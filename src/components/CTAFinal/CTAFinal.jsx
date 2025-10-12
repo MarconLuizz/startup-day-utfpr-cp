@@ -25,7 +25,7 @@ export default function CTAFinal() {
 
         <div className="cta__socials">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/startup-day-utfpr-cp"
             target="_blank"
             rel="noreferrer"
             className="cta__icon"
@@ -33,7 +33,7 @@ export default function CTAFinal() {
             <FaLinkedin />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/startupday.utfpr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noreferrer"
             className="cta__icon"
@@ -41,7 +41,7 @@ export default function CTAFinal() {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/"
+            href="https://chat.whatsapp.com/Cm7lIlvB6Ex2CfTdo8NbEl?mode=wwc"
             target="_blank"
             rel="noreferrer"
             className="cta__icon"
