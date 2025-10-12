@@ -5,7 +5,6 @@
   --muted: rgba(0, 0, 0, 0.72);
 }
 
-/* Section */
 .values {
   padding: 3rem 1rem;
   background: transparent;
@@ -21,7 +20,6 @@
   text-align: center;
 }
 
-/* Heading centered */
 .values__heading {
   font-size: 1.95rem;
   font-weight: 800;
@@ -30,7 +28,6 @@
   text-align: center;
 }
 
-/* Grids: top (3 cols), bottom (2 cols) */
 .values__grid {
   display: grid;
   gap: 1rem;
@@ -48,17 +45,14 @@
   align-items: start;
 }
 
-/* Individual unit (no card) */
 .values__unit {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
   padding: 0.4rem 0.6rem;
-  /* no background, no border — clean */
 }
 
-/* Icon circle */
 .values__icon {
   width: 56px;
   height: 56px;
@@ -78,7 +72,6 @@
   stroke: none;
 }
 
-/* Title + description */
 .values__unit-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -94,27 +87,21 @@
   text-align: center;
 }
 
-/* hover effect (subtle) */
 .values__unit:hover .values__icon {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 18px 40px rgba(0, 120, 255, 0.1);
 }
 
-/* Layout adjustments for visual alignment on larger screens:
-   keep content centered but left-align text within each unit if you prefer.
-   Currently text is centered to match icon-center aesthetic.
-*/
 @media (min-width: 1100px) {
   .values__unit-desc {
     max-width: 280px;
   }
 }
 
-/* Responsive: collapse to single column on mobile */
 @media (max-width: 900px) {
   .values__grid--top {
     grid-template-columns: 1fr 1fr;
-  } /* 2 per row on tablet */
+  }
   .values__grid--bottom {
     grid-template-columns: 1fr 1fr;
   }

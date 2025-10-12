@@ -1,4 +1,3 @@
-/* reset simples */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,14 +18,12 @@ body {
   line-height: 1.4;
 }
 
-/* container util */
 .container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* buttons */
 .btn {
   display: inline-flex;
   align-items: center;

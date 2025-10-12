@@ -15,7 +15,7 @@ export default function Header() {
 
   const handleScroll = (href) => {
     scrollToId(href);
-    setMenuOpen(false); // fecha menu mobile ao clicar
+    setMenuOpen(false);
   };
 
   return (

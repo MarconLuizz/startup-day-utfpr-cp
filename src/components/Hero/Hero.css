@@ -6,7 +6,6 @@
   justify-content: center;
   text-align: center;
   padding: 2rem 1rem;
-  /* Gradiente animado */
   background: linear-gradient(135deg, #0b3f7e, #09376f, #06254c, #041d3a);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
@@ -35,14 +34,14 @@
 }
 
 .hero__logo {
-  width: 200px; /* aumentei de 120px */
-  height: 200px; /* aumentei de 120px */
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 1rem;
 }
 
 .hero__title {
-  font-size: 3.2rem; /* de 2.8rem para 3.2rem */
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 1px;
@@ -50,7 +49,7 @@
 }
 
 .hero__subtitle {
-  font-size: 1.2rem; /* de 1.25rem para 1.4rem */
+  font-size: 1.2rem;
   font-weight: 400;
   max-width: 600px;
   color: rgba(255, 255, 255, 0.85);
@@ -63,13 +62,12 @@
   margin-top: 1.5rem;
 }
 
-/* botões */
 .btn {
   font-weight: 600;
   cursor: pointer;
-  border-radius: 10px; /* levemente mais arredondado */
-  padding: 0.85rem 1.6rem; /* aumentei padding para maior área clicável */
-  font-size: 1.05rem; /* fonte levemente maior */
+  border-radius: 10px;
+  padding: 0.85rem 1.6rem;
+  font-size: 1.05rem;
   transition: all 0.18s ease;
 }
 
@@ -87,31 +85,30 @@
 }
 
 .btn--ghost {
-  background-color: transparent; /* fundo transparente */
-  color: #ffffff !important; /* força o texto branco */
-  border: 2px solid #ffffff !important; /* força borda branca */
+  background-color: transparent;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
   transition: all 0.2s ease;
 }
 
 .btn--ghost:hover {
-  background-color: #ffffff24 !important; /* fundo branco ao hover */
-  border-color: #ffffff !important; /* mantém a borda branca */
+  background-color: #ffffff24 !important;
+  border-color: #ffffff !important;
   transform: translateY(-1px);
 }
 
-/* Responsividade */
 @media (max-width: 820px) {
   .hero {
-    padding: 8rem 1rem 2rem; /* topo maior para o header */
+    padding: 8rem 1rem 2rem;
   }
   .hero__title {
-    font-size: 2.6rem; /* leve aumento para mobile */
+    font-size: 2.6rem;
   }
   .hero__subtitle {
-    font-size: 1.15rem; /* leve aumento para mobile */
+    font-size: 1.15rem;
   }
   .hero__logo {
-    width: 130px; /* ajustado mobile */
+    width: 130px;
     height: 130px;
   }
   .hero__actions {
@@ -119,7 +116,7 @@
     gap: 0.8rem;
   }
   .btn {
-    font-size: 1rem; /* ajuste mobile */
+    font-size: 1rem;
     padding: 0.75rem 1.4rem;
   }
 }

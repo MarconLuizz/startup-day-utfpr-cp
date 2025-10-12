@@ -1,5 +1,5 @@
 .cta {
-  background-color: #f7f7f7; /* leve cinza */
+  background-color: #f7f7f7;
   padding: 4rem 1.5rem;
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   background-color: #fff;
   padding: 3rem 2rem;
   border-radius: 16px;
-  border: 2px solid rgba(0, 74, 173, 0.15); /* borda temática azul translúcida */
+  border: 2px solid rgba(0, 74, 173, 0.15);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   max-width: 1050px;
   width: 100%;

@@ -1,4 +1,3 @@
-// src/components/Supporters/Supporters.jsx
 import React from "react";
 import "./Supporters.css";
 import { supporters } from "./supportersData";

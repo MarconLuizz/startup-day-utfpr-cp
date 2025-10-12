@@ -1,10 +1,8 @@
-/* Seção FAQ */
 #faq.section {
-  background: #f7f7f7; /* branco puxado para o cinza */
+  background: #f7f7f7;
   padding: 5rem 1rem;
 }
 
-/* Lista de perguntas */
 .faq__list {
   display: flex;
   flex-direction: column;
@@ -12,15 +10,13 @@
   margin-top: 1rem;
 }
 
-/* Cartão */
 .faq__card {
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   overflow: hidden;
-  background: #ffffff; /* mantém os cards brancos */
+  background: #ffffff;
 }
 
-/* Pergunta */
 .faq__question {
   width: 100%;
   background: transparent;
@@ -34,7 +30,6 @@
   color: var(--black);
 }
 
-/* Resposta */
 .faq__answer {
   max-height: 0;
   overflow: hidden;
@@ -47,21 +42,18 @@
   max-height: 400px;
 }
 
-/* Toggle */
 .faq__toggle {
   font-size: 1.6rem;
   line-height: 1;
   color: var(--muted);
 }
 
-/* Texto da resposta */
 .faq__answer p {
   margin: 0;
   color: var(--muted);
   line-height: 1.5;
 }
 
-/* Título */
 .section__title {
   text-align: center;
   font-size: 1.95rem;

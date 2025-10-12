@@ -1,4 +1,3 @@
-// src/components/Supporters/supportersData.js
 import logoSprint from "../../assets/logo-sprintcp.png";
 import logoUtfpr from "../../assets/logo-utfpr.png";
 import logoForlogic from "../../assets/logo-forlogic.png";

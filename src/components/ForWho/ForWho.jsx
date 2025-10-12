@@ -1,6 +1,6 @@
 import React from "react";
 import "./ForWho.css";
-import { FaUsers } from "react-icons/fa"; // substituindo FaPeopleGroup
+import { FaUsers } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
 import { IoIosRocket } from "react-icons/io";
 
