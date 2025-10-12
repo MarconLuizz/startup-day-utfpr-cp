@@ -1,3 +1,4 @@
+// src/components/Supporters/Supporters.jsx
 import React from "react";
 import "./Supporters.css";
 import { supporters } from "./supportersData";
@@ -23,7 +24,14 @@ export default function Supporters() {
               role="listitem"
               aria-label={`Visite o site de ${s.name}`}
             >
-              <img src={s.logo} alt={s.name} className="supporters__logo" />
+              <img
+                src={s.logo}
+                alt={s.name}
+                className="supporters__logo"
+                width={160}
+                height={80}
+                loading="lazy"
+              />
             </a>
           ))}
         </div>
