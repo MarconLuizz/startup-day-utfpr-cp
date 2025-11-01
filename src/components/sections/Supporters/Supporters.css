@@ -1,75 +1,76 @@
-.supporters-section {
-  background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-  padding: 4rem 1rem;
-}
+/* SupportersSection.module.css */
+@import "../../../styles/variables.css";
 
-.supporters__wrap {
+.supportersSection {
+  width: 100%;
+  padding: 1rem 0;
   display: flex;
-  gap: 2rem;
   justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-behavior: smooth;
+  align-items: center;
+  background: var(--bg, transparent);
 }
 
-.supporters__wrap::-webkit-scrollbar {
-  height: 6px;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.supporters__wrap::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 74, 173, 0.5);
-  border-radius: 3px;
+.title {
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
 }
 
-.supporters__item {
+/* wrapper do loop — mantém altura e oculta overflow */
+.loopWrapper {
+  height: 90px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 120px;
-  padding: 0.5rem;
-  background: none;
-  border: none;
-  box-shadow: none;
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.supporters__item:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-}
-
-.supporters__logo {
-  max-width: 100%;
-  max-height: 100%;
+/* estilos padrão para imagens dentro do LogoLoop (caso o componente concede className) */
+.logoImg {
+  width: auto;
+  max-height: 56px; /* default; o LogoLoop também pode controlar com CSS var */
   object-fit: contain;
+  filter: none; /* remova se quiser inverter cores */
 }
 
-.section__title {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  color: var(--primary, #004aad);
+/* ajustes por marca (opcional) */
+.logoSebrae {
+  max-height: 100px !important;
+}
+.logoSprint {
+  max-height: 75px;
+}
+.logoUtfpr {
+  max-height: 60px !important;
+}
+.logoForlogic {
+  max-height: 26px !important;
+}
+.logoOxion {
+  max-height: 56px !important;
 }
 
-@media (max-width: 1200px) {
-  .supporters__wrap {
-    gap: 1rem;
+/* responsividade */
+@media (max-width: 768px) {
+  .loopWrapper {
+    height: 72px;
   }
-  .supporters__item {
-    width: 140px;
-    height: 100px;
+  .logoSebrae {
+    max-height: 32px;
   }
-}
-
-@media (max-width: 700px) {
-  .supporters__wrap {
-    gap: 0rem;
-  }
-  .supporters__item {
-    width: 120px;
-    height: 80px;
+  .logoSprint {
+    max-height: 48px;
   }
 }

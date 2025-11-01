@@ -5,14 +5,15 @@ export const timeline = [
     desc: "Credenciamento e networking livre.",
   },
   {
-    time: "14:00 - 14:30",
-    title: "Palestra de Abertura",
-    desc: "Primeira palestra com convidado especial.",
+    time: "14:00 - 14:40",
+    title:
+      "Palestra - O Futuro é Agora: Tendências de Tecnologia que Vão Criar os Próximos Negócios",
+    desc: "Palestrantes: Igor Vicentini e Laís de Sá - Time de inovação da Forlogic",
   },
   {
-    time: "14:30 - 15:30",
+    time: "14:40 - 15:30",
     title: "Estandes + Networking",
-    desc: "Visite estandes das startups e conecte-se.",
+    desc: "Visite estandes das startups e conecte-se com empreendedores do nosso ecossistema.",
   },
   {
     time: "15:30 - 16:10",
@@ -25,13 +26,14 @@ export const timeline = [
     desc: "Tempo para descanso, networking e felicidade.",
   },
   {
-    time: "16:40 - 17:10",
-    title: "Palestra Convidado Especial",
-    desc: "Segunda palestra com convidado especial.",
+    time: "16:40 - 17:15",
+    title:
+      "Palestra - Chega de Achismo: Como Validar sua Ideia gastando o mínimo de dinheiro.",
+    desc: "Palestrante: Laerte Holak Zaccarelli - Cofundador e CPO da QualityStorm",
   },
   {
-    time: "17:15 - 18:15",
-    title: "Sessão 'Conte sua Ideia'",
+    time: "17:15 - 18:30",
+    title: "Sessão: 'Conte sua Ideia'",
     desc: "Apresente sua ideia em 5 minutos para a banca e participe de uma competição. As melhores ideias ganharão um prêmio.",
   },
   {

@@ -9,6 +9,7 @@ import Supporters from "../components/sections/Supporters/Supporters";
 import FAQ from "../components/sections/FAQ/FAQ";
 import CTAFinal from "../components/sections/CTAFinal/CTAFinal";
 import Footer from "../components/sections/Footer/Footer";
+import SpeakersSection from "../components/sections/SpeakersSection/SpeakersSection";
 
 function Home() {
   return (
@@ -16,12 +17,11 @@ function Home() {
       <Header />
       <main>
         <Hero />
-        <InfoEvent />
-        <About />
-        <Values />
-        <ForWho />
-        <Timeline />
         <Supporters />
+        <About />
+        <Timeline />
+        <SpeakersSection />
+        <ForWho />
         <FAQ />
         <CTAFinal />
       </main>
@@ -31,3 +31,14 @@ function Home() {
 }
 
 export default Home;
+
+//        <InfoEvent />
+/*         <Hero />
+        <Supporters />
+        <About />
+        <Values />
+        <ForWho />
+        <Timeline />
+        <FAQ />
+        <CTAFinal />
+*/
