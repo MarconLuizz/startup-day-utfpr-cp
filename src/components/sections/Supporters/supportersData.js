@@ -1,8 +1,8 @@
-import logoSprint from "../../assets/logo-sprintcp.png";
-import logoUtfpr from "../../assets/logo-utfpr.png";
-import logoForlogic from "../../assets/logo-forlogic.png";
-import logoOxion from "../../assets/logo-oxion.png";
-import logoSebrae from "../../assets/logo-sebrae.png";
+import logoSprint from "../../../assets/supporters/logo-sprintcp.png";
+import logoUtfpr from "../../../assets/supporters/logo-utfpr.png";
+import logoForlogic from "../../../assets/supporters/logo-forlogic.png";
+import logoOxion from "../../../assets/supporters/logo-oxion.png";
+import logoSebrae from "../../../assets/supporters/logo-sebrae.png";
 
 export const supporters = [
   {

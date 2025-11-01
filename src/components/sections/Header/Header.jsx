@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import scrollToId from "./Header.utils";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

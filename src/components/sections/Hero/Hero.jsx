@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import scrollToId from "../Header/Header.utils";
 
 export default function Hero() {

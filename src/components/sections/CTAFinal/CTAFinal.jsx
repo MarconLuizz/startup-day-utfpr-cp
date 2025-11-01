@@ -2,7 +2,7 @@
 import React from "react";
 import "./CTAFinal.css";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "../../assets/logo.png"; // import da imagem
+import logo from "../../../assets/logo.png";
 
 export default function CTAFinal() {
   return (
