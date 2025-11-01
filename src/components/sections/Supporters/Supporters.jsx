@@ -1,38 +1,45 @@
+// src/components/sections/Supporters/Supporters.jsx
 import React from "react";
-import "./Supporters.css";
+import LogoLoop from "../../ui/LogoLoop/LogoLoop";
 import { supporters } from "./supportersData";
+import "./Supporters.css"; // IMPORTAÇÃO NORMAL (não módulo)
 
-export default function Supporters() {
+export default function SupportersSection() {
+  const imageLogos = supporters.map((s) => ({
+    src: s.logo,
+    alt: s.name,
+    href: s.url,
+    className: s.name.toLowerCase().includes("sebrae")
+      ? "logoSebrae"
+      : s.name.toLowerCase().includes("sprint")
+      ? "logoSprint"
+      : s.name.toLowerCase().includes("utfpr")
+      ? "logoUtfpr"
+      : s.name.toLowerCase().includes("forlogic")
+      ? "logoForlogic"
+      : s.name.toLowerCase().includes("oxion")
+      ? "logoOxion"
+      : "",
+  }));
+
   return (
-    <section id="supporters" className="section supporters-section">
+    <section className="supportersSection" aria-label="Apoiadores">
       <div className="container">
-        <h2 className="section__title">Apoiadores</h2>
+        <h2 className="title">APOIADORES</h2>
 
-        <div
-          className="supporters__wrap"
-          role="list"
-          aria-label="Logos dos apoiadores"
-        >
-          {supporters.map((s) => (
-            <a
-              key={s.id}
-              href={s.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="supporters__item"
-              role="listitem"
-              aria-label={`Visite o site de ${s.name}`}
-            >
-              <img
-                src={s.logo}
-                alt={s.name}
-                className="supporters__logo"
-                width={160}
-                height={80}
-                loading="lazy"
-              />
-            </a>
-          ))}
+        <div className="loopWrapper">
+          <LogoLoop
+            logos={imageLogos}
+            speed={120}
+            direction="left"
+            logoHeight={56}
+            gap={64}
+            pauseOnHover={true}
+            scaleOnHover={false}
+            fadeOut={true}
+            fadeOutColor="#fff"
+            ariaLabel="Apoiadores do Startup Day UTFPR CP"
+          />
         </div>
       </div>
     </section>

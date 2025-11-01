@@ -1,0 +1,60 @@
+/* container controla a altura a partir da variável passada via prop */
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  --logoloop-gap: 32px;
+  --logoloop-logoHeight: 48px; /* fallback caso não passe prop */
+  height: var(--logoloop-logoHeight); /* força altura do componente */
+  display: block;
+}
+
+/* lista reset */
+.logoloop__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* cada item - evita colapso e mantém espaçamento mínimo */
+.logoloop__item {
+  flex: 0 0 auto;
+  margin-right: var(--logoloop-gap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(
+    var(--logoloop-logoHeight) * 1.2
+  ); /* evita que imagens muito estreitas "sumam" */
+}
+
+/* imagens: forçam altura e preservam proporção */
+.logoloop__item img {
+  height: var(--logoloop-logoHeight);
+  max-height: var(--logoloop-logoHeight);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* assegura que track esteja centralizado verticalmente */
+.logoloop__track {
+  display: flex;
+  align-items: center;
+}
+
+/* ajuste por alt (quickfix) */
+.logoloop__item img[alt="Microsoft for Founders"] {
+  height: calc(var(--logoloop-logoHeight) * 0.9); /* 15% maior */
+}
+
+.logoloop__item img[alt="sprinT"] {
+  height: calc(var(--logoloop-logoHeight) * 1); /* 5% menor */
+}
+
+.logoloop__item img[alt="Sebrae For Startups"] {
+  height: calc(var(--logoloop-logoHeight) * 0.7); /* 5% menor */
+}

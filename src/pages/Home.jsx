@@ -16,12 +16,12 @@ function Home() {
       <Header />
       <main>
         <Hero />
+        <Supporters />
         <InfoEvent />
         <About />
         <Values />
         <ForWho />
         <Timeline />
-        <Supporters />
         <FAQ />
         <CTAFinal />
       </main>
