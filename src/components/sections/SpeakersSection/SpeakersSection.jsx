@@ -14,7 +14,7 @@ const speakersData = [
     position: "Time de Inovação - Forlogic",
     description:
       "Trabalha na criação de novos módulos e produtos, utilizando Inteligência Artificial para acelerar o desenvolvimento e aumentar o impacto das soluções.",
-    linkedin: "https://www.linkedin.com/in/igorvicentini/",
+    linkedin: "https://www.linkedin.com/in/igor-vicentini-garcia/",
   },
   {
     name: "Laís de Sá",
@@ -23,7 +23,7 @@ const speakersData = [
     position: "Time de Inovação - Forlogic",
     description:
       "Atua na descoberta e gestão de novos produtos, provas de conceito (PoCs) e MVPs voltados à geração de alor para gestão e qualidade dos clientes",
-    linkedin: "https://www.linkedin.com/in/laisdsa/",
+    linkedin: "https://www.linkedin.com/in/laisdesaalmeida/",
   },
   {
     name: "Laerte Holak Zaccarelli",
@@ -32,7 +32,7 @@ const speakersData = [
     position: "Cofundador & CPO - QualityStorm",
     description:
       "Co-fundador e chefe de Produto da QualityStorm, é formado em Ciências da Computação (UEL) e pós-graduado em Administração (FGV). ",
-    linkedin: "https://www.linkedin.com/in/laerteholak/",
+    linkedin: "https://www.linkedin.com/in/lhzaccarelli/",
   },
 ];
 
