@@ -1,0 +1,49 @@
+.startup-detail-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.startup-detail-hero {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(9, 30, 66, 0.04);
+}
+
+.startup-detail-logo {
+  width: 220px;
+  height: 140px;
+  object-fit: contain;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.startup-detail-head h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.startup-detail-sector {
+  color: #0077b6;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.startup-detail-slogan {
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.startup-detail-desc {
+  margin-top: 1.5rem;
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(9, 30, 66, 0.03);
+}

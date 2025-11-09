@@ -1,32 +1,40 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 import scrollToId from "./Header.utils";
 import logo from "../../../assets/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const menu = [
     { label: "Início", href: "home" },
     { label: "Sobre", href: "about" },
     { label: "Local", href: "info" },
     { label: "Cronograma", href: "timeline" },
+    { label: "Palestrantes", href: "speakers" },
   ];
 
   const handleScroll = (href) => {
-    scrollToId(href);
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => scrollToId(href), 100);
+    } else {
+      scrollToId(href);
+    }
     setMenuOpen(false);
   };
 
   return (
-    <header className="header-floating" role="banner">
+    <header className="header-floating">
       <div className="header-floating__inner container">
         <a
-          href="#home"
+          href="/"
           className="header-floating__brand"
-          aria-label="Ir para o início"
           onClick={(e) => {
             e.preventDefault();
+            navigate("/");
             scrollToId("home");
           }}
         >
@@ -37,12 +45,10 @@ export default function Header() {
           />
         </a>
 
-        {/* Nav desktop / mobile */}
         <nav
           className={`header-floating__nav ${
             menuOpen ? "header-floating__nav--open" : ""
           }`}
-          aria-label="Navegação principal"
         >
           {menu.map((item) => (
             <button
@@ -53,6 +59,17 @@ export default function Header() {
               {item.label}
             </button>
           ))}
+
+          <button
+            className="header-floating__link"
+            onClick={() => {
+              navigate("/startups");
+              setMenuOpen(false);
+            }}
+          >
+            Startups
+          </button>
+
           <button
             className="header-floating__link header-floating__link--cta"
             onClick={() => handleScroll("cta")}
@@ -61,11 +78,9 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Hamburger mobile */}
         <button
           className="header-floating__hamburger"
-          aria-label="Abrir menu"
-          onClick={() => setMenuOpen((prev) => !prev)}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <span />
           <span />
